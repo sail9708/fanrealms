@@ -3,12 +3,14 @@
   <entry>
     <title>Kali DDoS-python脚本使用</title>
     <url>/2020/03/31/Kali-DDoS-python%E8%84%9A%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<center>
+    <content><![CDATA[<hr>
+<center> 
 利用来源于GitHub的python脚本，实现DDoS attack。
-
-<p>From：<a href="https://github.com/Ha3MrX/DDos-Attack" target="_blank" rel="noopener">https://github.com/Ha3MrX/DDos-Attack</a></p>
-<p>Environment：Kali Linux</p>
+From：https://github.com/Ha3MrX/DDos-Attack
+Environment：Kali Linux
 </center>
+
+<hr>
 <a id="more"></a>
 
 <h4 id="1-使用git从GitHub克隆到本地"><a href="#1-使用git从GitHub克隆到本地" class="headerlink" title="1. 使用git从GitHub克隆到本地"></a>1. 使用git从GitHub克隆到本地</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/Ha3MrX/DDos-Attack</span><br></pre></td></tr></table></figure>
