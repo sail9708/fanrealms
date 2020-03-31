@@ -4,12 +4,11 @@
     <title>Kali DDoS-python脚本使用</title>
     <url>/2020/03/31/Kali-DDoS-python%E8%84%9A%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<hr>
-<center> 
-利用来源于GitHub的python脚本，实现DDoS attack。
+<center>用来源于GitHub的python脚本，实现DDoS attack。</center>
 
-<p>From：<a href="https://github.com/Ha3MrX/DDos-Attack" target="_blank" rel="noopener">https://github.com/Ha3MrX/DDos-Attack</a></p>
-<p>Environment：Kali Linux</p>
-</center>
+<center>From：https://github.com/Ha3MrX/DDos-Attack </center>
+
+<center>Environment：Kali Linux</center>
 
 <hr>
 <a id="more"></a>
@@ -116,12 +115,12 @@
 <h5 id="2-2-基础参数"><a href="#2-2-基础参数" class="headerlink" title="2.2 基础参数"></a>2.2 基础参数</h5><ul>
 <li>SM2的曲线方程为$y^2=x^3+ax+b$，其中：<ul>
 <li>$a:$ <label style="color:red"><code>0xFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000FFFFFFFFFFFFFFFC</code></label></li>
-<li>$b:$ <font color=red><code>0x28E9FA9E9D9F5E344D5A9E4BCF6509A7F39789F515AB8F92DDBCBD414D940E93</code></font></li>
-<li>$p:$ <font color=red><code>0xFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000FFFFFFFFFFFFFFFF</code></font></li>
+<li>$b:$ <font color="red"><code>0x28E9FA9E9D9F5E344D5A9E4BCF6509A7F39789F515AB8F92DDBCBD414D940E93</code></font></li>
+<li>$p:$ <font color="red"><code>0xFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000FFFFFFFFFFFFFFFF</code></font></li>
 </ul>
 </li>
 <li>私钥长度：32字节</li>
-<li>公钥长度：SM2__非压缩公钥格式<strong>字节串长度为65字节，</strong>压缩格式__长度为33字节，若公钥y坐标最后一位为0，则首字节为<font color=red><code>0x02</code></font>，否则为<font color=red><code>0x33</code></font>。非压缩格式公钥首字节为<font color=red><code>0x04</code></font>。</li>
+<li>公钥长度：SM2__非压缩公钥格式<strong>字节串长度为65字节，</strong>压缩格式__长度为33字节，若公钥y坐标最后一位为0，则首字节为<font color="red"><code>0x02</code></font>，否则为<font color="red"><code>0x33</code></font>。非压缩格式公钥首字节为<font color="red"><code>0x04</code></font>。</li>
 <li>签名长度：64字节</li>
 </ul>
 <h4 id="3-密钥对生成"><a href="#3-密钥对生成" class="headerlink" title="3  密钥对生成"></a>3  密钥对生成</h4><p><strong>SM2密钥生成是指生成SM2算法的密钥对的过程，该密钥对包括私钥和与之对应的公钥。</strong></p>
