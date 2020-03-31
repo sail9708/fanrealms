@@ -18,7 +18,7 @@
 <h4 id="3-运行脚本"><a href="#3-运行脚本" class="headerlink" title="3. 运行脚本"></a>3. 运行脚本</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python ddos-attack.py       <span class="comment">#运行脚本</span></span><br></pre></td></tr></table></figure>
 
 <p>输入IP地址开始</p>
-<p><img src="C:%5CUsers%5Cqinfa%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200331204023684.png" alt="image-20200331204023684"></p>
+<p><img src="/2020/03/31/Kali-DDoS-python%E8%84%9A%E6%9C%AC%E4%BD%BF%E7%94%A8/image-20200331204023684.png" alt="image-20200331204023684"></p>
 <p><code>Crtl+C</code> 结束</p>
 ]]></content>
       <categories>
