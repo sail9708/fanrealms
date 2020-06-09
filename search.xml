@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>使用kali在局域网中实现ARP攻击</title>
+    <url>/2020/06/09/%E4%BD%BF%E7%94%A8kali%E5%9C%A8%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%AD%E5%AE%9E%E7%8E%B0ARP%E6%94%BB%E5%87%BB/</url>
+    <content><![CDATA[<hr>
+<center>使用kali中的arpspoof工具，来对局域网内的特定IP进行ARP攻击</center>
+<center>仅供娱乐，切勿恶意使用！</center>
+---
+<a id="more"></a>
+
+<h4 id="1-准备"><a href="#1-准备" class="headerlink" title="1. 准备"></a>1. 准备</h4><ul>
+<li>装有kali的虚拟机</li>
+<li>同一网段下存在一台靶机（自己的手机，平板电脑等都可）</li>
+</ul>
+<h4 id="2-ARP介绍"><a href="#2-ARP介绍" class="headerlink" title="2. ARP介绍"></a>2. ARP介绍</h4><ul>
+<li><strong>ARP协议：</strong>地址解析协议，功能是实现IP地址到MAC地址的转换。</li>
+<li><strong>ARP攻击：</strong>利用ARP协议设计时缺乏安全验证漏洞来实现的，通过伪造ARP数据包来窃取合法用户的通信数据，造成影响网络传输速率和盗取用户隐私信息等严重危害。<ul>
+<li>主要是存在于局域网网络中。</li>
+<li><strong>攻击原理：</strong>通过伪造IP地址和MAC地址进行欺骗。使以太网数据包的源地址、目标地址和ARP数通信量导致网络中断或中间人攻击。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-具体步骤"><a href="#3-具体步骤" class="headerlink" title="3. 具体步骤"></a>3. 具体步骤</h4><ol>
+<li><p>查看虚拟机与物理机IP</p>
+<ul>
+<li><p>查看虚拟机的IP地址以及网关</p>
+<p>​        打开终端，输入<code>ifconfig</code>查看</p>
+</li>
+<li><p>查看物理机的IP地址</p>
+<p>​        打开cmd终端，输入<code>ipconfig</code>查看</p>
+</li>
+<li><p>若物理机与虚拟机不在同一网段，则将其设置为同一网段</p>
+</li>
+</ul>
+</li>
+<li><p>设置物理机与虚拟机为同一网段（使用的是VMware）</p>
+<ul>
+<li><p>输入<code>Ctrl+D</code>，打开虚拟机设置，并将网络适配器设置为桥接模式</p>
+<p><img src="/2020/06/09/%E4%BD%BF%E7%94%A8kali%E5%9C%A8%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%AD%E5%AE%9E%E7%8E%B0ARP%E6%94%BB%E5%87%BB/image-20200609155458979.png" alt="设置桥接模式"></p>
+</li>
+<li><p>打开编辑中的虚拟网络编辑器，并“更改设置”，设置桥接模式，并选择自己的网卡</p>
+<p><img src="/2020/06/09/%E4%BD%BF%E7%94%A8kali%E5%9C%A8%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%AD%E5%AE%9E%E7%8E%B0ARP%E6%94%BB%E5%87%BB/image-20200609155744206.png" alt="打开虚拟网络编辑器"></p>
+<p><img src="/2020/06/09/%E4%BD%BF%E7%94%A8kali%E5%9C%A8%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%AD%E5%AE%9E%E7%8E%B0ARP%E6%94%BB%E5%87%BB/image-20200609160024268.png" alt="设置"></p>
+</li>
+<li><p>再次查看虚拟机与物理机是否在同一网段</p>
+</li>
+</ul>
+</li>
+<li><p>ARP Attack</p>
+<ul>
+<li><p>进入kali终端，使用<code>fping</code>指令扫描网段内所有的IP地址</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fping -asg xxx.xxx.xxx.xxx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>利用arpspoof对指定IP地址进行攻击</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">arpspoof -i 网卡 -t 目标IP</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>检查靶机网络情况</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Kali</category>
+      </categories>
+      <tags>
+        <tag>ARP攻击</tag>
+        <tag>虚拟机</tag>
+        <tag>局域网</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Kali DDoS-python脚本使用</title>
     <url>/2020/03/31/Kali-DDoS-python%E8%84%9A%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<hr>
